@@ -40,3 +40,9 @@ gulp.task('build:asset:scss', function(){
     return $.rubySass('./src/asset/scss/styledanhier.scss')
         .pipe(gulp.dest('./build/asset/css'));
 });
+
+
+gulp.task('deploy', ['build'], function(){
+    return gulp.src('./build/**/*')
+        .pipe($.ghPages());
+});
