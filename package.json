@@ -2,6 +2,7 @@
   "devDependencies": {
     "browser-sync": "^2.6.4",
     "browserify": "^9.0.8",
+    "folderify": "^0.6.0",
     "gulp": "^3.8.11",
     "gulp-gh-pages": "^0.5.0",
     "gulp-load-plugins": "^0.10.0",

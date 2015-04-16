@@ -1,8 +1,4 @@
-var manager = require('../manager');
-
-var OptionAbstract = function(){
-    manager.registerOption(this);
-};
+var OptionAbstract = function(){};
 
 OptionAbstract.prototype = {
     activate: function(){},

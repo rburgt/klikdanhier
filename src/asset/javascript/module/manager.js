@@ -1,3 +1,6 @@
+var includeFolder = require('include-folder');
+var Options = includeFolder('./option');
+
 var Manager = function(){
     this._options = [];
 };
@@ -28,6 +31,14 @@ Manager.prototype = {
 
             this._activeOption = option;
             option.activate();
+        }
+    },
+
+    createOption: function(optionName/*, optionconfiguration */){
+        var Option = Options[optionName];
+
+        if (Option){
+            this.registerOption(new Option(Array.prototype.slice.call(arguments, 1)));
         }
     }
 };
